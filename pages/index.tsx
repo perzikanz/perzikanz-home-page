@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
+import verselSvg from '../public/vercel.svg';
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -60,7 +62,7 @@ export default function Home() {
           Powered by{' '}
           <span className={styles.logo}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
+            <img src={verselSvg} alt='Vercel Logo' width={72} height={16} />
           </span>
         </a>
       </footer>
