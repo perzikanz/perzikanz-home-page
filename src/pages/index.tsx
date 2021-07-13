@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
-import verselSvg from '../public/vercel.svg';
+import verselSvg from '../../public/vercel.svg';
 
 export default function Home() {
   return (
