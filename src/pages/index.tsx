@@ -1,6 +1,29 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
+const ImageWrapper = ({
+  src,
+  width,
+  alt,
+  height,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}) => {
+  return (
+    <>
+      <img
+        src={`${process.env.IMAGE_DOMAIN}${src}`}
+        width={width}
+        alt={alt}
+        height={height}
+      />
+    </>
+  );
+};
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -59,7 +82,12 @@ export default function Home() {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <img src={'/versel.svg'} alt='Vercel logo' width={72} height={16} />
+            <ImageWrapper
+              src={'/vercel.svg'}
+              alt='Vercel logo'
+              width={72}
+              height={16}
+            />
           </span>
         </a>
       </footer>
