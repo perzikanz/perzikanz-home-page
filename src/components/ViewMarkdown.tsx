@@ -8,7 +8,7 @@ import {
   CodeComponent,
   ReactMarkdownNames,
 } from 'react-markdown/src/ast-to-react';
-import style from '../styles/blog.module.css';
+import style from '../styles/blogArticle.module.css';
 
 type TResponse = {
   items: {
@@ -22,7 +22,7 @@ type TResponse = {
 };
 
 const ViewMarkdown = () => {
-  const [markdown, setMarkdown] = useState('# Hello World');
+  const [markdown, setMarkdown] = useState('');
   const [title, setTitle] = useState('');
   const client = contentful.createClient({
     space: `${process.env.NEXT_PUBLIC_SPACE_ID}`,
@@ -57,7 +57,7 @@ const ViewMarkdown = () => {
         {String(children).replace(/\n$/, '')}
       </SyntaxHighlighter>
     ) : (
-      <code className={className} {...props}>
+      <code className={style.inline_code} {...props}>
         {children}
       </code>
     );
@@ -72,9 +72,13 @@ const ViewMarkdown = () => {
   });
 
   return (
-    <div className={style.blog_post}>
-      <h1>{title}</h1>
-      <ReactMarkdown remarkPlugins={[gfm]} components={components}>
+    <div className={style.blog_article}>
+      <h1 className={style.blog_title}>{title}</h1>
+      <ReactMarkdown
+        remarkPlugins={[gfm]}
+        components={components}
+        className={style.blog_body}
+      >
         {markdown}
       </ReactMarkdown>
     </div>
