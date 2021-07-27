@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import * as contentful from 'contentful';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -10,34 +9,8 @@ import {
 } from 'react-markdown/src/ast-to-react';
 import style from '../styles/blogArticle.module.css';
 
-type TResponse = {
-  items: {
-    fields: {
-      bodyText: string;
-      title: string;
-    };
-    metadata: {};
-    sys: {};
-  }[];
-};
-
-const ViewMarkdown = () => {
-  const [markdown, setMarkdown] = useState('');
-  const [title, setTitle] = useState('');
-  const client = contentful.createClient({
-    space: `${process.env.NEXT_PUBLIC_SPACE_ID}`,
-    accessToken: `${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`,
-  });
-
-  const getEntryes = async () => {
-    const response: TResponse = await client.getEntries({
-      content_type: process.env.NEXT_PUBLIC_CONTENT_TYPE_ID,
-    });
-    const { items } = response;
-    setMarkdown(items[0].fields.bodyText);
-    setTitle(items[0].fields.title);
-  };
-
+const ViewMarkdown = (props: { title: string; markdown: string }) => {
+  const { title, markdown } = props;
   const codeBlock: CodeComponent | ReactMarkdownNames = ({
     node,
     inline,
@@ -66,10 +39,6 @@ const ViewMarkdown = () => {
   const components = {
     code: codeBlock,
   };
-
-  useEffect(() => {
-    getEntryes();
-  });
 
   return (
     <div className={style.blog_article}>
