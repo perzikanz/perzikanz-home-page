@@ -7,7 +7,7 @@ import {
   CodeComponent,
   ReactMarkdownNames,
 } from 'react-markdown/src/ast-to-react';
-import style from '../styles/blogArticle.module.css';
+import style from '../styles/article.module.css';
 
 const ViewMarkdown = (props: { title: string; markdown: string }) => {
   const { title, markdown } = props;
