@@ -3,6 +3,7 @@ import Link from 'next/link';
 import client from '../../components/contentfulClient';
 
 import { TEntries } from '../../components/types';
+import style from '../../styles/blogTitle.module.css';
 
 const BlogTitles = () => {
   const [blogIds, setBlogIds] = useState<string[]>([]);
@@ -33,9 +34,9 @@ const BlogTitles = () => {
     const links = [];
     for (let i = 0; i < blogIds.length; i++) {
       const blogLink = (
-        <li key={blogIds[i]}>
+        <li key={blogIds[i]} className={style.article_list_item}>
           <Link href={'/blog/[id]'} as={`/blog/${blogIds[i]}`}>
-            <a>{titles[i]}</a>
+            <a className={style.blog_title_ancher}>{titles[i]}</a>
           </Link>
         </li>
       );
@@ -46,7 +47,8 @@ const BlogTitles = () => {
 
   return (
     <>
-      <ul>{blogLinks}</ul>
+      <h1 className={style.page_title}>記事一覧</h1>
+      <ul className={style.article_list}>{blogLinks}</ul>
     </>
   );
 };
