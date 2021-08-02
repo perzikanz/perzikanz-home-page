@@ -5,11 +5,13 @@ const ImageWrapper = ({
   width,
   alt,
   height,
+  className,
 }: {
   src: string;
   alt: string;
   width: number;
   height: number;
+  className: string;
 }) => {
   return (
     <>
@@ -18,6 +20,7 @@ const ImageWrapper = ({
         width={width}
         alt={alt}
         height={height}
+        className={className}
       />
     </>
   );
