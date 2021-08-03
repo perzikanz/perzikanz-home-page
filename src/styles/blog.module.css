@@ -1,7 +1,8 @@
 .page_title {
   font-size: 32px;
   font-weight: normal;
-  margin: 60px auto;
+  margin: 0 auto 60px;
+  padding: 120px 0 0;
   text-align: center;
 }
 

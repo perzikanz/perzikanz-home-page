@@ -13,16 +13,28 @@ const Profile = () => {
         />
         <p className={styles.name}>あんず</p>
         <div className={styles.introductions}>
-          <p>React, Next.js, TypeScriptを勉強中です。</p>
+          <p className={styles.introductions_text}>
+            React, Next.js, TypeScriptを勉強中です。
+          </p>
         </div>
         <ul className={styles.url_list}>
           <li className={styles.url_list_item}>
-            <a href={'https://github.com/perzikanz'} className={styles.url}>
+            <a
+              href={'https://github.com/perzikanz'}
+              className={styles.url}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               Git Hub
             </a>
           </li>
           <li className={styles.url_list_item}>
-            <a href={'https://twitter.com/Perzik_anz'} className={styles.url}>
+            <a
+              href={'https://twitter.com/Perzik_anz'}
+              className={styles.url}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               Twitter
             </a>
           </li>

@@ -6,7 +6,7 @@ const BlogTop = () => {
   return (
     <>
       <h1 className={style.page_title}>記事一覧</h1>
-      <BlogTitles titleNumber={10} />
+      <BlogTitles titleNumber={100} />
     </>
   );
 };

@@ -3,29 +3,38 @@
   margin: auto;
 }
 
-.h2 {
-  color: #252a2c;
-  font-weight: normal;
-  margin: 0;
-  text-align: center;
-}
-
 .blog_titles {
   border-bottom: 1px solid #cadecd;
   margin: 0 auto;
   max-width: 500px;
-  padding: 60px 0 0;
+  padding: 60px 0;
 }
 
+.h2 {
+  color: #252a2c;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 40px;
+  text-align: center;
+}
 .anchor_wrapper {
   text-align: center;
-  margin: 40px auto 60px;
+  margin: 0 auto;
 }
 
 .more_title_anchor {
   color: #4a5359;
+  font-size: 16px;
 }
 
 .more_title_anchor:hover {
   text-decoration: underline;
+}
+
+.footer {
+  height: 80px;
+}
+
+.fotter_text {
+  margin: 0;
 }
