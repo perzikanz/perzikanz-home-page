@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import BlogTitles from '../components/blog/BlogTitles';
 import Profile from '../components/Profile';
+import Work from '../components/Work';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <Profile />
         <div className={styles.blog_titles}>
-          <h2 className={styles.h2}>最新記事</h2>
+          <h2 className={styles.h2}>ブログ</h2>
           <BlogTitles titleNumber={5} />
           <div className={styles.anchor_wrapper}>
             <Link href='/blog'>
@@ -24,9 +25,12 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <Work />
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <p className={styles.fotter_text}></p>
+      </footer>
     </>
   );
 }

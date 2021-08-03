@@ -1,0 +1,37 @@
+.work {
+  border-bottom: 1px solid #cadecd;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px 0 60px;
+}
+
+.component_title {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.work_container {
+  text-align: center;
+  margin: 40px 0 0;
+}
+
+.work_date {
+  font-size: 14px;
+  margin: 0;
+}
+
+.work_description {
+  font-size: 18px;
+  margin: 8px 0;
+  padding: 0;
+}
+
+.work_image {
+  background: #f2eddc;
+  display: block;
+  height: 500px;
+  margin: 0 auto;
+  width: 400px;
+}
