@@ -1,25 +1,22 @@
 html,
 body {
-  background: #dde6cf;
+  background: #fcfdfa;
+  color: #252a2c;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  background: linear-gradient(#dde6cf, #dde6cf 100px, transparent 100px 100%);
+}
+
 a {
-  color: inherit;
+  color: #4a5359;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
 }
-
-/* 
-#CADECD
-#DDE6CF
-#F2EDDC
-#D3EBE9
-#BAD0DE
-*/
