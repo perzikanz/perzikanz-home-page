@@ -16,6 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <Profile />
         <div className={styles.blog_titles}>
+          <h2 className={styles.h2}>最新記事</h2>
           <BlogTitles titleNumber={5} />
           <div className={styles.anchor_wrapper}>
             <Link href='/blog'>

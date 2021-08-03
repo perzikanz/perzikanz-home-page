@@ -3,11 +3,23 @@
   margin: auto;
 }
 
+.h2 {
+  color: #252a2c;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
 .blog_titles {
+  border-bottom: 1px solid #cadecd;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 60px 0 0;
 }
 
 .anchor_wrapper {
   text-align: center;
+  margin: 40px auto 60px;
 }
 
 .more_title_anchor {
