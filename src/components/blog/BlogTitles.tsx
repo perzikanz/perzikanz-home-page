@@ -8,6 +8,7 @@ import styles from '../../styles/blogTitle.module.css';
 const BlogTitles = ({ titleNumber }: { titleNumber: number }) => {
   const [blogIds, setBlogIds] = useState<string[]>([]);
   const [titles, setTitles] = useState<string[]>([]);
+  const [dates, setDates] = useState<string[]>([]);
   const [blogLinks, setBlogLinks] = useState<JSX.Element[]>([]);
 
   const getEntries = async () => {
@@ -16,14 +17,17 @@ const BlogTitles = ({ titleNumber }: { titleNumber: number }) => {
       limit: titleNumber,
     });
     const { items } = response;
-    const ids: string[] = [];
-    const tit: string[] = [];
+    const idSet: string[] = [];
+    const titleSet: string[] = [];
+    const dateSet: string[] = [];
     items.forEach((item) => {
-      ids.push(item.sys.id);
-      tit.push(item.fields.title);
+      idSet.push(item.sys.id);
+      titleSet.push(item.fields.title);
+      dateSet.push(item.fields.date);
     });
-    setBlogIds(ids);
-    setTitles(tit);
+    setBlogIds(idSet);
+    setTitles(titleSet);
+    setDates(dateSet);
   };
 
   useEffect(() => {
@@ -36,14 +40,17 @@ const BlogTitles = ({ titleNumber }: { titleNumber: number }) => {
       const blogLink = (
         <li key={blogIds[i]} className={styles.article_list_item}>
           <Link href={'/blog/[id]'} as={`/blog/${blogIds[i]}`}>
-            <a className={styles.blog_title_ancher}>{titles[i]}</a>
+            <a className={styles.blog_title_ancher}>
+              <p className={styles.blog_title}>{titles[i]}</p>
+              <p className={styles.blog_date}>{dates[i]}</p>
+            </a>
           </Link>
         </li>
       );
       links.push(blogLink);
     }
     setBlogLinks(links);
-  }, [blogIds, titles]);
+  }, [blogIds, titles, dates]);
 
   return (
     <>
