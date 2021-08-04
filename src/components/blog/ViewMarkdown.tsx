@@ -9,7 +9,7 @@ import {
 } from 'react-markdown/src/ast-to-react';
 
 import { xonokai } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import styles from '../styles/ViewMarkdown.module.css';
+import styles from '../../styles/ViewMarkdown.module.css';
 
 const ViewMarkdown = ({ markdown }: { markdown: string }) => {
   const codeBlock: CodeComponent | ReactMarkdownNames = ({

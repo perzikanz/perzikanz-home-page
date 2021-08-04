@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ImageWrapper from '../components/ImageWrapper';
+import ImageWrapper from '../ImageWrapper';
 
-import styles from '../styles/work.module.css';
+import styles from '../../styles/work.module.css';
 
 const WorkContainer = ({
   date,

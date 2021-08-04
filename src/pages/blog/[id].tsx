@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import client from '../../components/contentfulClient';
-import ViewMarkdown from '../../components/ViewMarkdown';
+import ViewMarkdown from '../../components/blog/ViewMarkdown';
 
 import { TEntry } from '../../components/types';
 
