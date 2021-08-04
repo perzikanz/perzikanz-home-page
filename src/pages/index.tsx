@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import BlogTitles from '../components/blog/BlogTitles';
+import Footer from '../components/Footer';
 import Profile from '../components/top/Profile';
+import BlogTitles from '../components/blog/BlogTitles';
 import Work from '../components/top/Work';
 
 import styles from '../styles/Home.module.css';
@@ -30,9 +31,7 @@ export default function Home() {
         <Work />
       </main>
 
-      <footer className={styles.footer}>
-        <p className={styles.fotter_text}></p>
-      </footer>
+      <Footer />
     </>
   );
 }
