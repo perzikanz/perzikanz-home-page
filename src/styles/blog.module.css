@@ -1,5 +1,4 @@
 .blog_page {
-  max-width: 820px;
   margin: auto;
   padding: 60px 0;
 }
@@ -7,6 +6,8 @@
 .blog_article {
   background: #fcfdfa;
   border-radius: 12px;
+  margin: 0 auto;
+  max-width: 820px;
   padding: 60px 48px;
 }
 
