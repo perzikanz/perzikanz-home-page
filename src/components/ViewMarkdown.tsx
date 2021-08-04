@@ -2,15 +2,16 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { xonokai } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
 import {
   CodeComponent,
   ReactMarkdownNames,
 } from 'react-markdown/src/ast-to-react';
-import style from '../styles/article.module.css';
 
-const ViewMarkdown = (props: { title: string; markdown: string }) => {
-  const { title, markdown } = props;
+import { xonokai } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import styles from '../styles/ViewMarkdown.module.css';
+
+const ViewMarkdown = ({ markdown }: { markdown: string }) => {
   const codeBlock: CodeComponent | ReactMarkdownNames = ({
     node,
     inline,
@@ -30,7 +31,7 @@ const ViewMarkdown = (props: { title: string; markdown: string }) => {
         {String(children).replace(/\n$/, '')}
       </SyntaxHighlighter>
     ) : (
-      <code className={style.inline_code} {...props}>
+      <code className={styles.inline_code} {...props}>
         {children}
       </code>
     );
@@ -41,16 +42,13 @@ const ViewMarkdown = (props: { title: string; markdown: string }) => {
   };
 
   return (
-    <div className={style.blog_article}>
-      <h1 className={style.blog_title}>{title}</h1>
-      <ReactMarkdown
-        remarkPlugins={[gfm]}
-        components={components}
-        className={style.blog_body}
-      >
-        {markdown}
-      </ReactMarkdown>
-    </div>
+    <ReactMarkdown
+      remarkPlugins={[gfm]}
+      components={components}
+      className={styles.blog_body}
+    >
+      {markdown}
+    </ReactMarkdown>
   );
 };
 

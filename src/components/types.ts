@@ -16,6 +16,7 @@ export type TEntry = {
   fields: {
     bodyText: string;
     title: string;
+    date: string;
   };
   metadata: {};
   sys: {};

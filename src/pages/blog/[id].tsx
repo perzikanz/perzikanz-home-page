@@ -4,13 +4,14 @@ import { useRouter } from 'next/router';
 
 import client from '../../components/contentfulClient';
 import ViewMarkdown from '../../components/ViewMarkdown';
-import style from '../../styles/blog.module.css';
+import styles from '../../styles/Blog.module.css';
 
 import { TEntry } from '../../components/types';
 
 const Blog = () => {
   const [title, setTitle] = useState('');
   const [markdown, setMarkdown] = useState('');
+  const [date, setDate] = useState('');
   const router = useRouter();
 
   const { id } = router.query;
@@ -18,6 +19,7 @@ const Blog = () => {
   const getEntry = async () => {
     const response: TEntry = await client.getEntry(`${id}`);
     setTitle(response.fields.title);
+    setDate(response.fields.date);
     setMarkdown(response.fields.bodyText);
   };
 
@@ -32,9 +34,13 @@ const Blog = () => {
         <meta name='description' content='' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className={style.blog}>
-        <ViewMarkdown title={title} markdown={markdown} />
-      </div>
+      <main className={styles.blog_page}>
+        <div className={styles.blog_article}>
+          <h1 className={styles.blog_title}>{title}</h1>
+          <p className={styles.blog_date}>{date}</p>
+          <ViewMarkdown markdown={markdown} />
+        </div>
+      </main>
     </>
   );
 };
