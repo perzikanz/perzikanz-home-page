@@ -1,11 +1,20 @@
 .footer {
+  border-top: 1px solid #a2b2a4;
   height: 80px;
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 .fotter_text {
   color: #707d85;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0;
   padding: 20px 0 0;
   text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .fotter_text {
+    font-size: 14px;
+  }
 }
