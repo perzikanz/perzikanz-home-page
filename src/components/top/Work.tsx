@@ -31,7 +31,7 @@ const WorkContainer = ({
 const Work = () => {
   return (
     <div className={styles.work}>
-      <h2 className={styles.component_title}>実績紹介</h2>
+      <h2 className={styles.component_title}>Work</h2>
       <WorkContainer
         date={'2021/04'}
         description={'ダンススクールのホームページを作成しました。'}

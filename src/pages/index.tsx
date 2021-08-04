@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Profile from '../components/top/Profile';
 import BlogTitles from '../components/blog/BlogTitles';
@@ -17,10 +18,12 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
+      <Header />
+
       <main className={styles.main}>
         <Profile />
         <div className={styles.blog_titles}>
-          <h2 className={styles.h2}>ブログ</h2>
+          <h2 className={styles.h2}>Blog</h2>
           <BlogTitles titleNumber={5} />
           <div className={styles.anchor_wrapper}>
             <Link href='/blog'>
