@@ -1,6 +1,9 @@
 import React from 'react';
+import Head from 'next/head';
+
 import BlogTitles from '../../components/blog/BlogTitles';
-import style from '../../styles/blog.module.css';
+
+import style from '../../styles/BlogTop.module.css';
 
 const BlogTop = () => {
   return (

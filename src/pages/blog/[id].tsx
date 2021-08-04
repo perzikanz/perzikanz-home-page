@@ -4,9 +4,10 @@ import { useRouter } from 'next/router';
 
 import client from '../../components/contentfulClient';
 import ViewMarkdown from '../../components/ViewMarkdown';
-import styles from '../../styles/Blog.module.css';
 
 import { TEntry } from '../../components/types';
+
+import styles from '../../styles/Blog.module.css';
 
 const Blog = () => {
   const [title, setTitle] = useState('');

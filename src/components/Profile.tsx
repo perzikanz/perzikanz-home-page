@@ -1,5 +1,7 @@
 import React from 'react';
+
 import ImageWrapper from './ImageWrapper';
+
 import styles from '../styles/profile.module.css';
 
 const Profile = () => {

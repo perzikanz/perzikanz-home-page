@@ -3,7 +3,8 @@ import Link from 'next/link';
 import client from '../contentfulClient';
 
 import { TEntries } from '../types';
-import styles from '../../styles/blogTitle.module.css';
+
+import styles from '../../styles/BlogTitles.module.css';
 
 const BlogTitles = ({ titleNumber }: { titleNumber: number }) => {
   const [blogIds, setBlogIds] = useState<string[]>([]);

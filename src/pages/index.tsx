@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+
 import BlogTitles from '../components/blog/BlogTitles';
 import Profile from '../components/Profile';
 import Work from '../components/Work';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
