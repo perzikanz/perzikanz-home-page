@@ -7,17 +7,21 @@ import styles from '../../styles/profile.module.css';
 const Profile = () => {
   return (
     <>
-      <div className={styles.profile_container}>
-        <ImageWrapper
-          src={''}
-          alt={'icon image'}
-          className={styles.icon_image}
-        />
-        <p className={styles.name}>あんず</p>
+      <div className={'white_container ' + styles.profile_container}>
+        <div className={styles.name_container}>
+          <ImageWrapper
+            src={''}
+            alt={'icon image'}
+            className={styles.icon_image}
+          />
+          <p className={styles.name}>あんず</p>
+        </div>
+
         <div className={styles.introductions}>
           <p className={styles.introductions_text}>
-            React, Next.js, TypeScriptを勉強中です。
+            React, Next.js, TypeScriptを勉強中
           </p>
+          <p className={styles.introductions_text}>フリーターです。</p>
         </div>
         <ul className={styles.url_list}>
           <li className={styles.url_list_item}>

@@ -18,7 +18,7 @@ const BlogTop = () => {
 
       <Header />
 
-      <main className={styles.main_container}>
+      <main className={'white_container ' + styles.main_container}>
         <h1 className={styles.page_title}>記事一覧</h1>
         <BlogTitles titleNumber={100} />
       </main>

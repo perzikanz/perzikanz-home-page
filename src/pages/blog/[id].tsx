@@ -41,7 +41,7 @@ const Blog = () => {
       <Header />
 
       <main className={styles.blog_page}>
-        <div className={styles.blog_article}>
+        <div className={'white_container ' + styles.blog_article}>
           <h1 className={styles.blog_title}>{title}</h1>
           <p className={styles.blog_date}>{date}</p>
           <ViewMarkdown markdown={markdown} />

@@ -22,7 +22,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <Profile />
-        <div className={styles.blog_titles}>
+
+        <div className={'white_container ' + styles.blog_titles_container}>
           <h2 className={styles.h2}>Blog</h2>
           <BlogTitles titleNumber={5} />
           <div className={styles.anchor_wrapper}>
@@ -31,6 +32,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
         <Work />
       </main>
 
