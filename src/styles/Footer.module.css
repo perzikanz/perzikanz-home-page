@@ -1,0 +1,23 @@
+.footer {
+  margin: 20px auto;
+}
+
+@media screen and (min-width: 750px) {
+  .footer {
+    margin: 20px auto 40px;
+  }
+}
+
+.fotter_text {
+  color: #707d85;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .fotter_text {
+    font-size: 14px;
+  }
+}

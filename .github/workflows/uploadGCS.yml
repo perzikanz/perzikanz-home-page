@@ -10,6 +10,13 @@ on:
 jobs:
   build_and_upload:
     runs-on: ubuntu-latest
+    env:
+      STORAGE_DOMAIN: ${{secrets.STORAGE_DOMAIN}}
+      SUB_DIRECTORY: ${{secrets.SUB_DIRECTORY}}
+      NEXT_PUBLIC_STORAGE_DOMAIN: ${{secrets.STORAGE_DOMAIN}}
+      NEXT_PUBLIC_SPACE_ID: ${{secrets.SPACE_ID}}
+      NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN: ${{secrets.DELIVERY_ACCESS_TOKEN}}
+      NEXT_PUBLIC_CONTENT_TYPE_ID: ${{secrets.CONTENT_TYPE_ID}}
 
     steps:
       - uses: actions/checkout@v2
