@@ -27,7 +27,7 @@ export default function Home() {
           <h2 className={styles.h2}>Blog</h2>
           <BlogTitles titleNumber={5} />
           <div className={styles.anchor_wrapper}>
-            <Link href='/blog'>
+            <Link href='/blog' as='/blog.html'>
               <a className={styles.more_title_anchor}>もっと見る</a>
             </Link>
           </div>

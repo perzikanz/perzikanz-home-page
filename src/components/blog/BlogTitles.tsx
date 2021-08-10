@@ -40,7 +40,7 @@ const BlogTitles = ({ titleNumber }: { titleNumber: number }) => {
     for (let i = 0; i < blogIds.length; i++) {
       const blogLink = (
         <li key={blogIds[i]} className={styles.article_list_item}>
-          <Link href={'/blog/[id]'} as={`/blog/${blogIds[i]}`}>
+          <Link href={'/blog/[id]'} as={`/blog/${blogIds[i]}.html`}>
             <a className={styles.blog_title_ancher}>
               <p className={styles.blog_title}>{titles[i]}</p>
               <p className={styles.blog_date}>{dates[i]}</p>
